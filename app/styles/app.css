@@ -1,0 +1,1604 @@
+/*
+! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
+*/
+
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: currentColor;
+  /* 2 */
+}
+
+::before,
+::after {
+  --tw-content: '';
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+*/
+
+html {
+  line-height: 1.5;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -moz-tab-size: 4;
+  /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4;
+  /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 4 */
+  font-feature-settings: normal;
+  /* 5 */
+}
+
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+body {
+  margin: 0;
+  /* 1 */
+  line-height: inherit;
+  /* 2 */
+}
+
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  border-top-width: 1px;
+  /* 3 */
+}
+
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+/*
+Remove the default font size and weight for headings.
+*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/*
+Add the correct font weight in Edge and Safari.
+*/
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/*
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+  border-collapse: collapse;
+  /* 3 */
+}
+
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: inherit;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+button,
+select {
+  text-transform: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  -webkit-appearance: button;
+  /* 1 */
+  background-color: transparent;
+  /* 2 */
+  background-image: none;
+  /* 2 */
+}
+
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+:-moz-focusring {
+  outline: auto;
+}
+
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+ol,
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+Prevent resizing textareas horizontally by default.
+*/
+
+textarea {
+  resize: vertical;
+}
+
+/*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+input::placeholder,
+textarea::placeholder {
+  opacity: 1;
+  /* 1 */
+  color: #9ca3af;
+  /* 2 */
+}
+
+/*
+Set the default cursor for buttons.
+*/
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+
+:disabled {
+  cursor: default;
+}
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Make elements with the HTML hidden attribute stay hidden by default */
+
+[hidden] {
+  display: none;
+}
+
+body {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 240 240 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(66 66 66 / var(--tw-text-opacity));
+}
+
+*, ::before, ::after {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+::backdrop {
+  --tw-border-spacing-x: 0;
+  --tw-border-spacing-y: 0;
+  --tw-translate-x: 0;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  --tw-pan-x:  ;
+  --tw-pan-y:  ;
+  --tw-pinch-zoom:  ;
+  --tw-scroll-snap-strictness: proximity;
+  --tw-ordinal:  ;
+  --tw-slashed-zero:  ;
+  --tw-numeric-figure:  ;
+  --tw-numeric-spacing:  ;
+  --tw-numeric-fraction:  ;
+  --tw-ring-inset:  ;
+  --tw-ring-offset-width: 0px;
+  --tw-ring-offset-color: #fff;
+  --tw-ring-color: rgb(59 130 246 / 0.5);
+  --tw-ring-offset-shadow: 0 0 #0000;
+  --tw-ring-shadow: 0 0 #0000;
+  --tw-shadow: 0 0 #0000;
+  --tw-shadow-colored: 0 0 #0000;
+  --tw-blur:  ;
+  --tw-brightness:  ;
+  --tw-contrast:  ;
+  --tw-grayscale:  ;
+  --tw-hue-rotate:  ;
+  --tw-invert:  ;
+  --tw-saturate:  ;
+  --tw-sepia:  ;
+  --tw-drop-shadow:  ;
+  --tw-backdrop-blur:  ;
+  --tw-backdrop-brightness:  ;
+  --tw-backdrop-contrast:  ;
+  --tw-backdrop-grayscale:  ;
+  --tw-backdrop-hue-rotate:  ;
+  --tw-backdrop-invert:  ;
+  --tw-backdrop-opacity:  ;
+  --tw-backdrop-saturate:  ;
+  --tw-backdrop-sepia:  ;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.collapse {
+  visibility: collapse;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.relative {
+  position: relative;
+}
+
+.col-start-4 {
+  grid-column-start: 4;
+}
+
+.col-end-9 {
+  grid-column-end: 9;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.ml-20 {
+  margin-left: 5rem;
+}
+
+.block {
+  display: block;
+}
+
+.flex {
+  display: flex;
+}
+
+.table {
+  display: table;
+}
+
+.contents {
+  display: contents;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-\[30px\] {
+  height: 30px;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-9 {
+  height: 2.25rem;
+}
+
+.h-\[72px\] {
+  height: 72px;
+}
+
+.w-\[200px\] {
+  width: 200px;
+}
+
+.w-\[30px\] {
+  width: 30px;
+}
+
+.w-60 {
+  width: 15rem;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-9 {
+  width: 2.25rem;
+}
+
+.w-1 {
+  width: 0.25rem;
+}
+
+.border-collapse {
+  border-collapse: collapse;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize {
+  resize: both;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-x-4 {
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+
+.rounded-16 {
+  border-radius: 16px;
+}
+
+.rounded-12 {
+  border-radius: 12px;
+}
+
+.rounded-14 {
+  border-radius: 14px;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.bg-green {
+  --tw-bg-opacity: 1;
+  background-color: rgb(28 139 106 / var(--tw-bg-opacity));
+}
+
+.bg-green-light {
+  --tw-bg-opacity: 1;
+  background-color: rgb(53 164 131 / var(--tw-bg-opacity));
+}
+
+.bg-green-dark {
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 120 84 / var(--tw-bg-opacity));
+}
+
+.bg-red {
+  background-color: CA0000;
+}
+
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 20 199 / var(--tw-bg-opacity));
+}
+
+.bg-orange {
+  background-color: FFB800;
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-gray {
+  --tw-bg-opacity: 1;
+  background-color: rgb(183 183 183 / var(--tw-bg-opacity));
+}
+
+.bg-font {
+  --tw-bg-opacity: 1;
+  background-color: rgb(66 66 66 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-background {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 240 240 / var(--tw-bg-opacity));
+}
+
+.bg-green\/0 {
+  background-color: rgb(28 139 106 / 0);
+}
+
+.bg-green\/5 {
+  background-color: rgb(28 139 106 / 0.05);
+}
+
+.bg-green\/10 {
+  background-color: rgb(28 139 106 / 0.1);
+}
+
+.bg-green\/20 {
+  background-color: rgb(28 139 106 / 0.2);
+}
+
+.bg-green\/25 {
+  background-color: rgb(28 139 106 / 0.25);
+}
+
+.bg-green\/30 {
+  background-color: rgb(28 139 106 / 0.3);
+}
+
+.bg-green\/40 {
+  background-color: rgb(28 139 106 / 0.4);
+}
+
+.bg-green\/50 {
+  background-color: rgb(28 139 106 / 0.5);
+}
+
+.bg-green\/60 {
+  background-color: rgb(28 139 106 / 0.6);
+}
+
+.bg-green\/70 {
+  background-color: rgb(28 139 106 / 0.7);
+}
+
+.bg-green\/75 {
+  background-color: rgb(28 139 106 / 0.75);
+}
+
+.bg-green\/80 {
+  background-color: rgb(28 139 106 / 0.8);
+}
+
+.bg-green\/90 {
+  background-color: rgb(28 139 106 / 0.9);
+}
+
+.bg-green\/95 {
+  background-color: rgb(28 139 106 / 0.95);
+}
+
+.bg-green\/100 {
+  background-color: rgb(28 139 106 / 1);
+}
+
+.bg-green-light\/0 {
+  background-color: rgb(53 164 131 / 0);
+}
+
+.bg-green-light\/5 {
+  background-color: rgb(53 164 131 / 0.05);
+}
+
+.bg-green-light\/10 {
+  background-color: rgb(53 164 131 / 0.1);
+}
+
+.bg-green-light\/20 {
+  background-color: rgb(53 164 131 / 0.2);
+}
+
+.bg-green-light\/25 {
+  background-color: rgb(53 164 131 / 0.25);
+}
+
+.bg-green-light\/30 {
+  background-color: rgb(53 164 131 / 0.3);
+}
+
+.bg-green-light\/40 {
+  background-color: rgb(53 164 131 / 0.4);
+}
+
+.bg-green-light\/50 {
+  background-color: rgb(53 164 131 / 0.5);
+}
+
+.bg-green-light\/60 {
+  background-color: rgb(53 164 131 / 0.6);
+}
+
+.bg-green-light\/70 {
+  background-color: rgb(53 164 131 / 0.7);
+}
+
+.bg-green-light\/75 {
+  background-color: rgb(53 164 131 / 0.75);
+}
+
+.bg-green-light\/80 {
+  background-color: rgb(53 164 131 / 0.8);
+}
+
+.bg-green-light\/90 {
+  background-color: rgb(53 164 131 / 0.9);
+}
+
+.bg-green-light\/95 {
+  background-color: rgb(53 164 131 / 0.95);
+}
+
+.bg-green-light\/100 {
+  background-color: rgb(53 164 131 / 1);
+}
+
+.bg-green-dark\/0 {
+  background-color: rgb(7 120 84 / 0);
+}
+
+.bg-green-dark\/5 {
+  background-color: rgb(7 120 84 / 0.05);
+}
+
+.bg-green-dark\/10 {
+  background-color: rgb(7 120 84 / 0.1);
+}
+
+.bg-green-dark\/20 {
+  background-color: rgb(7 120 84 / 0.2);
+}
+
+.bg-green-dark\/25 {
+  background-color: rgb(7 120 84 / 0.25);
+}
+
+.bg-green-dark\/30 {
+  background-color: rgb(7 120 84 / 0.3);
+}
+
+.bg-green-dark\/40 {
+  background-color: rgb(7 120 84 / 0.4);
+}
+
+.bg-green-dark\/50 {
+  background-color: rgb(7 120 84 / 0.5);
+}
+
+.bg-green-dark\/60 {
+  background-color: rgb(7 120 84 / 0.6);
+}
+
+.bg-green-dark\/70 {
+  background-color: rgb(7 120 84 / 0.7);
+}
+
+.bg-green-dark\/75 {
+  background-color: rgb(7 120 84 / 0.75);
+}
+
+.bg-green-dark\/80 {
+  background-color: rgb(7 120 84 / 0.8);
+}
+
+.bg-green-dark\/90 {
+  background-color: rgb(7 120 84 / 0.9);
+}
+
+.bg-green-dark\/95 {
+  background-color: rgb(7 120 84 / 0.95);
+}
+
+.bg-green-dark\/100 {
+  background-color: rgb(7 120 84 / 1);
+}
+
+.bg-blue\/0 {
+  background-color: rgb(0 20 199 / 0);
+}
+
+.bg-blue\/5 {
+  background-color: rgb(0 20 199 / 0.05);
+}
+
+.bg-blue\/10 {
+  background-color: rgb(0 20 199 / 0.1);
+}
+
+.bg-blue\/20 {
+  background-color: rgb(0 20 199 / 0.2);
+}
+
+.bg-blue\/25 {
+  background-color: rgb(0 20 199 / 0.25);
+}
+
+.bg-blue\/30 {
+  background-color: rgb(0 20 199 / 0.3);
+}
+
+.bg-blue\/40 {
+  background-color: rgb(0 20 199 / 0.4);
+}
+
+.bg-blue\/50 {
+  background-color: rgb(0 20 199 / 0.5);
+}
+
+.bg-blue\/60 {
+  background-color: rgb(0 20 199 / 0.6);
+}
+
+.bg-blue\/70 {
+  background-color: rgb(0 20 199 / 0.7);
+}
+
+.bg-blue\/75 {
+  background-color: rgb(0 20 199 / 0.75);
+}
+
+.bg-blue\/80 {
+  background-color: rgb(0 20 199 / 0.8);
+}
+
+.bg-blue\/90 {
+  background-color: rgb(0 20 199 / 0.9);
+}
+
+.bg-blue\/95 {
+  background-color: rgb(0 20 199 / 0.95);
+}
+
+.bg-blue\/100 {
+  background-color: rgb(0 20 199 / 1);
+}
+
+.bg-white\/0 {
+  background-color: rgb(255 255 255 / 0);
+}
+
+.bg-white\/5 {
+  background-color: rgb(255 255 255 / 0.05);
+}
+
+.bg-white\/10 {
+  background-color: rgb(255 255 255 / 0.1);
+}
+
+.bg-white\/20 {
+  background-color: rgb(255 255 255 / 0.2);
+}
+
+.bg-white\/25 {
+  background-color: rgb(255 255 255 / 0.25);
+}
+
+.bg-white\/30 {
+  background-color: rgb(255 255 255 / 0.3);
+}
+
+.bg-white\/40 {
+  background-color: rgb(255 255 255 / 0.4);
+}
+
+.bg-white\/50 {
+  background-color: rgb(255 255 255 / 0.5);
+}
+
+.bg-white\/60 {
+  background-color: rgb(255 255 255 / 0.6);
+}
+
+.bg-white\/70 {
+  background-color: rgb(255 255 255 / 0.7);
+}
+
+.bg-white\/75 {
+  background-color: rgb(255 255 255 / 0.75);
+}
+
+.bg-white\/80 {
+  background-color: rgb(255 255 255 / 0.8);
+}
+
+.bg-white\/90 {
+  background-color: rgb(255 255 255 / 0.9);
+}
+
+.bg-white\/95 {
+  background-color: rgb(255 255 255 / 0.95);
+}
+
+.bg-white\/100 {
+  background-color: rgb(255 255 255 / 1);
+}
+
+.bg-gray\/0 {
+  background-color: rgb(183 183 183 / 0);
+}
+
+.bg-gray\/5 {
+  background-color: rgb(183 183 183 / 0.05);
+}
+
+.bg-gray\/10 {
+  background-color: rgb(183 183 183 / 0.1);
+}
+
+.bg-gray\/20 {
+  background-color: rgb(183 183 183 / 0.2);
+}
+
+.bg-gray\/25 {
+  background-color: rgb(183 183 183 / 0.25);
+}
+
+.bg-gray\/30 {
+  background-color: rgb(183 183 183 / 0.3);
+}
+
+.bg-gray\/40 {
+  background-color: rgb(183 183 183 / 0.4);
+}
+
+.bg-gray\/50 {
+  background-color: rgb(183 183 183 / 0.5);
+}
+
+.bg-gray\/60 {
+  background-color: rgb(183 183 183 / 0.6);
+}
+
+.bg-gray\/70 {
+  background-color: rgb(183 183 183 / 0.7);
+}
+
+.bg-gray\/75 {
+  background-color: rgb(183 183 183 / 0.75);
+}
+
+.bg-gray\/80 {
+  background-color: rgb(183 183 183 / 0.8);
+}
+
+.bg-gray\/90 {
+  background-color: rgb(183 183 183 / 0.9);
+}
+
+.bg-gray\/95 {
+  background-color: rgb(183 183 183 / 0.95);
+}
+
+.bg-gray\/100 {
+  background-color: rgb(183 183 183 / 1);
+}
+
+.bg-font\/0 {
+  background-color: rgb(66 66 66 / 0);
+}
+
+.bg-font\/5 {
+  background-color: rgb(66 66 66 / 0.05);
+}
+
+.bg-font\/10 {
+  background-color: rgb(66 66 66 / 0.1);
+}
+
+.bg-font\/20 {
+  background-color: rgb(66 66 66 / 0.2);
+}
+
+.bg-font\/25 {
+  background-color: rgb(66 66 66 / 0.25);
+}
+
+.bg-font\/30 {
+  background-color: rgb(66 66 66 / 0.3);
+}
+
+.bg-font\/40 {
+  background-color: rgb(66 66 66 / 0.4);
+}
+
+.bg-font\/50 {
+  background-color: rgb(66 66 66 / 0.5);
+}
+
+.bg-font\/60 {
+  background-color: rgb(66 66 66 / 0.6);
+}
+
+.bg-font\/70 {
+  background-color: rgb(66 66 66 / 0.7);
+}
+
+.bg-font\/75 {
+  background-color: rgb(66 66 66 / 0.75);
+}
+
+.bg-font\/80 {
+  background-color: rgb(66 66 66 / 0.8);
+}
+
+.bg-font\/90 {
+  background-color: rgb(66 66 66 / 0.9);
+}
+
+.bg-font\/95 {
+  background-color: rgb(66 66 66 / 0.95);
+}
+
+.bg-font\/100 {
+  background-color: rgb(66 66 66 / 1);
+}
+
+.bg-black\/0 {
+  background-color: rgb(0 0 0 / 0);
+}
+
+.bg-black\/5 {
+  background-color: rgb(0 0 0 / 0.05);
+}
+
+.bg-black\/10 {
+  background-color: rgb(0 0 0 / 0.1);
+}
+
+.bg-black\/20 {
+  background-color: rgb(0 0 0 / 0.2);
+}
+
+.bg-black\/25 {
+  background-color: rgb(0 0 0 / 0.25);
+}
+
+.bg-black\/30 {
+  background-color: rgb(0 0 0 / 0.3);
+}
+
+.bg-black\/40 {
+  background-color: rgb(0 0 0 / 0.4);
+}
+
+.bg-black\/50 {
+  background-color: rgb(0 0 0 / 0.5);
+}
+
+.bg-black\/60 {
+  background-color: rgb(0 0 0 / 0.6);
+}
+
+.bg-black\/70 {
+  background-color: rgb(0 0 0 / 0.7);
+}
+
+.bg-black\/75 {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.bg-black\/80 {
+  background-color: rgb(0 0 0 / 0.8);
+}
+
+.bg-black\/90 {
+  background-color: rgb(0 0 0 / 0.9);
+}
+
+.bg-black\/95 {
+  background-color: rgb(0 0 0 / 0.95);
+}
+
+.bg-black\/100 {
+  background-color: rgb(0 0 0 / 1);
+}
+
+.bg-background\/0 {
+  background-color: rgb(240 240 240 / 0);
+}
+
+.bg-background\/5 {
+  background-color: rgb(240 240 240 / 0.05);
+}
+
+.bg-background\/10 {
+  background-color: rgb(240 240 240 / 0.1);
+}
+
+.bg-background\/20 {
+  background-color: rgb(240 240 240 / 0.2);
+}
+
+.bg-background\/25 {
+  background-color: rgb(240 240 240 / 0.25);
+}
+
+.bg-background\/30 {
+  background-color: rgb(240 240 240 / 0.3);
+}
+
+.bg-background\/40 {
+  background-color: rgb(240 240 240 / 0.4);
+}
+
+.bg-background\/50 {
+  background-color: rgb(240 240 240 / 0.5);
+}
+
+.bg-background\/60 {
+  background-color: rgb(240 240 240 / 0.6);
+}
+
+.bg-background\/70 {
+  background-color: rgb(240 240 240 / 0.7);
+}
+
+.bg-background\/75 {
+  background-color: rgb(240 240 240 / 0.75);
+}
+
+.bg-background\/80 {
+  background-color: rgb(240 240 240 / 0.8);
+}
+
+.bg-background\/90 {
+  background-color: rgb(240 240 240 / 0.9);
+}
+
+.bg-background\/95 {
+  background-color: rgb(240 240 240 / 0.95);
+}
+
+.bg-background\/100 {
+  background-color: rgb(240 240 240 / 1);
+}
+
+.bg-opacity-0 {
+  --tw-bg-opacity: 0;
+}
+
+.bg-opacity-5 {
+  --tw-bg-opacity: 0.05;
+}
+
+.bg-opacity-10 {
+  --tw-bg-opacity: 0.1;
+}
+
+.bg-opacity-20 {
+  --tw-bg-opacity: 0.2;
+}
+
+.bg-opacity-25 {
+  --tw-bg-opacity: 0.25;
+}
+
+.bg-opacity-30 {
+  --tw-bg-opacity: 0.3;
+}
+
+.bg-opacity-40 {
+  --tw-bg-opacity: 0.4;
+}
+
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
+.bg-opacity-60 {
+  --tw-bg-opacity: 0.6;
+}
+
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
+}
+
+.bg-opacity-75 {
+  --tw-bg-opacity: 0.75;
+}
+
+.bg-opacity-80 {
+  --tw-bg-opacity: 0.8;
+}
+
+.bg-opacity-90 {
+  --tw-bg-opacity: 0.9;
+}
+
+.bg-opacity-95 {
+  --tw-bg-opacity: 0.95;
+}
+
+.bg-opacity-100 {
+  --tw-bg-opacity: 1;
+}
+
+.bg-none {
+  background-image: none;
+}
+
+.bg-gradient-to-t {
+  background-image: linear-gradient(to top, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-tr {
+  background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-r {
+  background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-br {
+  background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-bl {
+  background-image: linear-gradient(to bottom left, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-l {
+  background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
+.bg-gradient-to-tl {
+  background-image: linear-gradient(to top left, var(--tw-gradient-stops));
+}
+
+.bg-zoom-in {
+  background-image: url('/icons/zoom-in.svg');
+}
+
+.bg-zoom-out {
+  background-image: url('/icons/zoom-out.svg');
+}
+
+.bg-auto {
+  background-size: auto;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-fixed {
+  background-attachment: fixed;
+}
+
+.bg-local {
+  background-attachment: local;
+}
+
+.bg-scroll {
+  background-attachment: scroll;
+}
+
+.bg-clip-border {
+  background-clip: border-box;
+}
+
+.bg-clip-padding {
+  background-clip: padding-box;
+}
+
+.bg-clip-content {
+  background-clip: content-box;
+}
+
+.bg-clip-text {
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.bg-bottom {
+  background-position: bottom;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-left {
+  background-position: left;
+}
+
+.bg-left-bottom {
+  background-position: left bottom;
+}
+
+.bg-left-top {
+  background-position: left top;
+}
+
+.bg-right {
+  background-position: right;
+}
+
+.bg-right-bottom {
+  background-position: right bottom;
+}
+
+.bg-right-top {
+  background-position: right top;
+}
+
+.bg-top {
+  background-position: top;
+}
+
+.bg-repeat {
+  background-repeat: repeat;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.bg-repeat-x {
+  background-repeat: repeat-x;
+}
+
+.bg-repeat-y {
+  background-repeat: repeat-y;
+}
+
+.bg-repeat-round {
+  background-repeat: round;
+}
+
+.bg-repeat-space {
+  background-repeat: space;
+}
+
+.bg-origin-border {
+  background-origin: border-box;
+}
+
+.bg-origin-padding {
+  background-origin: padding-box;
+}
+
+.bg-origin-content {
+  background-origin: content-box;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.text-green {
+  --tw-text-opacity: 1;
+  color: rgb(28 139 106 / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
+}
+
+.bg-blend-normal {
+  background-blend-mode: normal;
+}
+
+.bg-blend-multiply {
+  background-blend-mode: multiply;
+}
+
+.bg-blend-screen {
+  background-blend-mode: screen;
+}
+
+.bg-blend-overlay {
+  background-blend-mode: overlay;
+}
+
+.bg-blend-darken {
+  background-blend-mode: darken;
+}
+
+.bg-blend-lighten {
+  background-blend-mode: lighten;
+}
+
+.bg-blend-color-dodge {
+  background-blend-mode: color-dodge;
+}
+
+.bg-blend-color-burn {
+  background-blend-mode: color-burn;
+}
+
+.bg-blend-hard-light {
+  background-blend-mode: hard-light;
+}
+
+.bg-blend-soft-light {
+  background-blend-mode: soft-light;
+}
+
+.bg-blend-difference {
+  background-blend-mode: difference;
+}
+
+.bg-blend-exclusion {
+  background-blend-mode: exclusion;
+}
+
+.bg-blend-hue {
+  background-blend-mode: hue;
+}
+
+.bg-blend-saturation {
+  background-blend-mode: saturation;
+}
+
+.bg-blend-color {
+  background-blend-mode: color;
+}
+
+.bg-blend-luminosity {
+  background-blend-mode: luminosity;
+}
+
+.shadow-\[1px_4px_6px_rgba\(0\2c 0\2c 0\2c 0\.11\)\] {
+  --tw-shadow: 1px 4px 6px rgba(0,0,0,0.11);
+  --tw-shadow-colored: 1px 4px 6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.shadow-\[0_4px_4px_0_rgba\(0\2c 0\2c 0\2c 0\.25\)\] {
+  --tw-shadow: 0 4px 4px 0 rgba(0,0,0,0.25);
+  --tw-shadow-colored: 0 4px 4px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+
+.outline {
+  outline-style: solid;
+}
+
+.ring-2 {
+  --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
+}
+
+.ring-black {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: rgb(0 0 0 / var(--tw-ring-opacity));
+}
+
+.ring-offset-\[3px\] {
+  --tw-ring-offset-width: 3px;
+}
+
+.ring-offset-white {
+  --tw-ring-offset-color: #FFFFFF;
+}
+
+.gradient {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  --tw-gradient-from: #35A483;
+  --tw-gradient-to: rgb(53 164 131 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  --tw-gradient-to: #077854;
+}
+
+.before\:content-\[\'\5728\6B64\66F8\5BEB\4F60\7684\7C3D\540D\'\]::before {
+  --tw-content: '在此書寫你的簽名';
+  content: var(--tw-content);
+}
