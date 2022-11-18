@@ -16,7 +16,7 @@ export const meta: MetaFunction = () => ({
 });
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }]
+  return [{ rel: "stylesheet", href: styles }];
 }
 
 export default function App() {
@@ -27,6 +27,7 @@ export default function App() {
         <Links />
       </head>
       <body>
+        {/* <Loading text="上傳中..." /> */}
         <Outlet />
         <ScrollRestoration />
         <Scripts />
